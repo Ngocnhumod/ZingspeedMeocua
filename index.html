@@ -301,6 +301,79 @@ header p{
   color:var(--vip-gold);
 }
 
+.update-time{
+  display:block;
+  margin-top:12px;
+  font-size:0.9rem;
+  color:var(--neon-cyan);
+  font-weight:600;
+}
+
+/* Special Zalo Group Button */
+.zalo-group-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-top:20px;
+  padding:16px 32px;
+  border-radius:999px;
+  background:linear-gradient(135deg, #0068ff, #00d4ff);
+  color:#fff;
+  font-weight:900;
+  font-family:'Orbitron',monospace;
+  font-size:15px;
+  box-shadow:0 8px 25px rgba(0,104,255,.4), 0 0 30px rgba(0,212,255,.3);
+  transition:.3s;
+  position:relative;
+  overflow:hidden;
+  animation:glowPulse 2s infinite;
+  border:2px solid rgba(0,212,255,.6);
+}
+
+.zalo-group-btn::before{
+  content:'';
+  position:absolute;
+  top:-50%;
+  left:-50%;
+  width:200%;
+  height:200%;
+  background:radial-gradient(circle, rgba(255,255,255,.3), transparent 70%);
+  animation:shimmerRadial 3s infinite;
+}
+
+@keyframes shimmerRadial{
+  0%{transform:translate(0,0)}
+  100%{transform:translate(30px,30px)}
+}
+
+@keyframes glowPulse{
+  0%, 100%{
+    box-shadow:0 8px 25px rgba(0,104,255,.4), 0 0 30px rgba(0,212,255,.3);
+    transform:scale(1);
+  }
+  50%{
+    box-shadow:0 8px 35px rgba(0,104,255,.6), 0 0 50px rgba(0,212,255,.5);
+    transform:scale(1.02);
+  }
+}
+
+.zalo-group-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 40px rgba(0,104,255,.8), 0 0 60px rgba(0,212,255,.6);
+}
+
+.zalo-group-btn i{
+  font-size:18px;
+  position:relative;
+  z-index:1;
+}
+
+.zalo-group-btn span{
+  position:relative;
+  z-index:1;
+}
+
 .pricing-section{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -543,6 +616,11 @@ footer{
   .quick-link-desc{
     font-size:0.85rem;
   }
+
+  .zalo-group-btn{
+    padding:14px 24px;
+    font-size:14px;
+  }
 }
 
 </style>
@@ -633,7 +711,12 @@ Lưu Ý
 </div>
 <div class="note-text">
 Key free cập nhật <strong>mỗi ngày</strong>. Nếu hết hạn, vui lòng <strong>lấy lại key mới</strong> hoặc <strong>thuê Key VIP</strong> để sử dụng không giới hạn! ⚡
+<span class="update-time"><i class="fas fa-clock"></i> Cập nhật lúc: <strong>13:30 hàng ngày</strong></span>
 </div>
+<a href="https://zalo.me/g/sydesed6fllqkzxjh5uq" target="_blank" class="zalo-group-btn">
+<i class="fas fa-users"></i>
+<span>Vào nhóm Zalo cập nhật Key</span>
+</a>
 </div>
 
 </section>
